@@ -11,7 +11,7 @@ AI-powered website builder for Startup Miracle's cold outreach campaign. Sales t
   - `cold_prospects` — 1,940 scraped GMB businesses with reviews, scores, competitive data
   - `stl_prospects` — Landing page data (what the deployed pages read from)
   - `generated_sites` — Website generation tracking (to be created)
-- **AI/LLM:** OpenAI GPT-4o-mini (cloud) + Ollama llama3.2:3b (local on MacMini at localhost:11434)
+- **AI/LLM:** OpenAI GPT-4o-mini (cloud) + Ollama qwen3.5:4b (local on MacMini at localhost:11434)
 - **Deployment:** Landing pages deploy to `get.startupmiracle.com/{slug}` via Cloudflare
 - **DNS:** Wildcard CNAME on `get.startupmiracle.com` handles all demo pages
 
@@ -33,7 +33,7 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzd
 
 ## Ollama (Local LLM)
 - Endpoint: `http://localhost:11434`
-- Available model: `llama3.2:3b`
+- Available model: `qwen3.5:4b`
 - Use for: draft generation, review analysis, cost-free operations
 - Fall back to OpenAI GPT-4o-mini for quality-critical outputs
 
