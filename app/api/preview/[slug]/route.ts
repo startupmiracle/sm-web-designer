@@ -12,19 +12,20 @@ export async function GET(
   const { slug } = await params;
 
   // 1. Try Supabase first (works on Vercel + local)
-  const { data } = await supabase
+  const { data: rows } = await supabase
     .from("generated_sites")
     .select("html_content")
     .eq("slug", slug)
     .not("html_content", "is", null)
-    .limit(1)
-    .single();
+    .order("created_at", { ascending: false })
+    .limit(1);
 
-  if (data?.html_content) {
-    return new NextResponse(data.html_content, {
+  const html_content = rows?.[0]?.html_content;
+  if (html_content) {
+    return new NextResponse(html_content, {
       headers: {
         "Content-Type": "text/html; charset=utf-8",
-        "Cache-Control": "public, max-age=60, s-maxage=300",
+        "Cache-Control": "public, max-age=10, s-maxage=30",
       },
     });
   }
