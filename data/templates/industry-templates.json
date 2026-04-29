@@ -1,0 +1,134 @@
+[
+  {
+    "id": "fencing",
+    "name": "Fencing",
+    "category": "fencing",
+    "heroImageStyle": "Crew installing a cedar privacy fence in a tidy suburban yard, warm afternoon light",
+    "colorAccent": "cedar gold",
+    "defaultServices": ["Wood privacy fences", "Vinyl fencing", "Chain-link fencing", "Fence repair", "Gate installation"],
+    "taglineExamples": ["Stronger fences. Cleaner installs. Better curb appeal.", "Built straight, built sturdy, built for your yard."],
+    "reviewKeywordPriorities": ["quality", "professional", "on time", "fair price", "cleanup"],
+    "promptInstructions": "Emphasize privacy, property value, durable materials, clean installation, and fast estimates."
+  },
+  {
+    "id": "roofing",
+    "name": "Roofing",
+    "category": "roofing",
+    "heroImageStyle": "Roofing crew replacing architectural shingles on a clean residential roofline",
+    "colorAccent": "slate gold",
+    "defaultServices": ["Roof replacement", "Storm damage repair", "Leak repair", "Roof inspections", "Gutter coordination"],
+    "taglineExamples": ["Protecting homes with roofs built to last.", "Local roofing done cleanly, quickly, and correctly."],
+    "reviewKeywordPriorities": ["responsive", "insurance", "cleanup", "honest", "craftsmanship"],
+    "promptInstructions": "Prioritize trust, storm readiness, warranty language, inspection calls to action, and proof from reviews."
+  },
+  {
+    "id": "hvac",
+    "name": "HVAC",
+    "category": "hvac",
+    "heroImageStyle": "Technician servicing a modern outdoor AC condenser beside a well-kept home",
+    "colorAccent": "cool brass",
+    "defaultServices": ["AC repair", "Furnace repair", "System replacement", "Seasonal tune-ups", "Indoor air quality"],
+    "taglineExamples": ["Reliable comfort when your home needs it most.", "Fast HVAC service from a local team you can reach."],
+    "reviewKeywordPriorities": ["fast", "knowledgeable", "honest", "emergency", "maintenance"],
+    "promptInstructions": "Highlight same-day service, seasonal comfort, transparent diagnostics, and emergency repair confidence."
+  },
+  {
+    "id": "plumbing",
+    "name": "Plumbing",
+    "category": "plumbing",
+    "heroImageStyle": "Licensed plumber repairing under-sink plumbing in a bright residential kitchen",
+    "colorAccent": "brushed gold",
+    "defaultServices": ["Leak repair", "Drain cleaning", "Water heater service", "Fixture installation", "Emergency plumbing"],
+    "taglineExamples": ["Clear answers and clean plumbing repairs.", "Local plumbing help without the runaround."],
+    "reviewKeywordPriorities": ["quick", "clean", "explained", "fair", "emergency"],
+    "promptInstructions": "Stress urgency, cleanliness, clear pricing, and confidence for homeowners with active plumbing problems."
+  },
+  {
+    "id": "landscaping",
+    "name": "Landscaping",
+    "category": "landscaping",
+    "heroImageStyle": "Fresh mulch, trimmed shrubs, and a crisp green lawn outside a local home",
+    "colorAccent": "garden gold",
+    "defaultServices": ["Lawn care", "Mulch installation", "Landscape design", "Seasonal cleanup", "Shrub trimming"],
+    "taglineExamples": ["Outdoor spaces that look cared for every week.", "Clean, reliable landscaping for homes and businesses."],
+    "reviewKeywordPriorities": ["reliable", "beautiful", "attention to detail", "weekly", "communication"],
+    "promptInstructions": "Make the page visual, service-plan oriented, and focused on reliability plus curb appeal."
+  },
+  {
+    "id": "concrete",
+    "name": "Concrete",
+    "category": "concrete",
+    "heroImageStyle": "Smooth new concrete driveway being finished by a professional crew",
+    "colorAccent": "warm stone",
+    "defaultServices": ["Driveways", "Patios", "Sidewalks", "Concrete repair", "Stamped concrete"],
+    "taglineExamples": ["Concrete work that adds usable space and lasting value.", "Clean pours, sharp finishes, dependable crews."],
+    "reviewKeywordPriorities": ["finish", "durable", "crew", "schedule", "value"],
+    "promptInstructions": "Feature durability, finish quality, project planning, and before-after transformation language."
+  },
+  {
+    "id": "junk-removal",
+    "name": "Junk Removal",
+    "category": "junk removal",
+    "heroImageStyle": "Friendly junk removal crew loading a clean truck outside a garage",
+    "colorAccent": "sunlit gold",
+    "defaultServices": ["Garage cleanouts", "Furniture removal", "Appliance removal", "Construction debris", "Estate cleanouts"],
+    "taglineExamples": ["Fast cleanouts without the heavy lifting.", "Point to it. We haul it away."],
+    "reviewKeywordPriorities": ["fast", "friendly", "careful", "affordable", "same day"],
+    "promptInstructions": "Lead with speed, simplicity, transparent estimates, and same-day availability."
+  },
+  {
+    "id": "painting",
+    "name": "Painting",
+    "category": "painting",
+    "heroImageStyle": "Painter applying a clean exterior coat to a bright local storefront",
+    "colorAccent": "honey gold",
+    "defaultServices": ["Interior painting", "Exterior painting", "Cabinet painting", "Drywall repair", "Commercial painting"],
+    "taglineExamples": ["A cleaner finish for the rooms people notice first.", "Professional painting with careful prep and crisp lines."],
+    "reviewKeywordPriorities": ["detail", "prep", "clean", "color", "professional"],
+    "promptInstructions": "Emphasize prep work, clean edges, color confidence, and minimal disruption."
+  },
+  {
+    "id": "general-contractor",
+    "name": "General Contractor",
+    "category": "general contractor",
+    "heroImageStyle": "Contractor reviewing plans in a bright kitchen remodel under construction",
+    "colorAccent": "architectural gold",
+    "defaultServices": ["Kitchen remodeling", "Bathroom remodeling", "Additions", "Repairs", "Project management"],
+    "taglineExamples": ["One local team to move your project from idea to done.", "Clear scopes, steady communication, quality work."],
+    "reviewKeywordPriorities": ["communication", "quality", "timeline", "trust", "detail"],
+    "promptInstructions": "Center project confidence, communication, licensed professionalism, and clear next-step consultation CTAs."
+  },
+  {
+    "id": "tree-service",
+    "name": "Tree Service",
+    "category": "tree service",
+    "heroImageStyle": "Tree service crew safely trimming branches with ropes and clean ground protection",
+    "colorAccent": "leaf gold",
+    "defaultServices": ["Tree removal", "Tree trimming", "Storm cleanup", "Stump grinding", "Emergency service"],
+    "taglineExamples": ["Safer trees, cleaner yards, careful crews.", "Tree work handled safely from first cut to final cleanup."],
+    "reviewKeywordPriorities": ["safe", "cleanup", "quick", "professional", "storm"],
+    "promptInstructions": "Stress safety, insured crew language, storm response, property protection, and cleanup."
+  },
+  {
+    "id": "pressure-washing",
+    "name": "Pressure Washing",
+    "category": "pressure washing",
+    "heroImageStyle": "Bright driveway half-cleaned by pressure washing with clear before-after contrast",
+    "colorAccent": "bright gold",
+    "defaultServices": ["House washing", "Driveway cleaning", "Deck cleaning", "Commercial washing", "Roof soft washing"],
+    "taglineExamples": ["Instant curb appeal with a cleaner exterior.", "Make siding, concrete, and patios look new again."],
+    "reviewKeywordPriorities": ["results", "before and after", "careful", "responsive", "value"],
+    "promptInstructions": "Use strong before-after framing, visual proof, exterior care, and quick quote CTAs."
+  },
+  {
+    "id": "garage-door",
+    "name": "Garage Door",
+    "category": "garage door",
+    "heroImageStyle": "Technician repairing a residential garage door spring in a clean driveway",
+    "colorAccent": "hardware gold",
+    "defaultServices": ["Spring repair", "Opener installation", "Door replacement", "Track repair", "Emergency service"],
+    "taglineExamples": ["Garage door repairs that get your day moving again.", "Fast local help for stuck, noisy, or broken doors."],
+    "reviewKeywordPriorities": ["same day", "honest", "repair", "professional", "price"],
+    "promptInstructions": "Highlight urgent repair, safety, same-day availability, and clear pricing."
+  }
+]
