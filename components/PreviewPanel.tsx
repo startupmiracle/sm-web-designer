@@ -1,6 +1,6 @@
 "use client";
 
-import { Monitor } from "lucide-react";
+import { ExternalLink, Monitor } from "lucide-react";
 
 interface PreviewPanelProps {
   previewUrl: string;
@@ -16,21 +16,34 @@ export function PreviewPanel({ previewUrl }: PreviewPanelProps) {
             Live Preview
           </h2>
         </div>
-        <span className="max-w-[220px] truncate text-xs text-stone-400">
-          {previewUrl || "No generated URL yet"}
-        </span>
+        <div className="flex items-center gap-2">
+          <span className="max-w-[220px] truncate text-xs text-stone-400">
+            {previewUrl || "No generated URL yet"}
+          </span>
+          {previewUrl && (
+            <a
+              href={previewUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-lg p-1.5 text-stone-400 transition hover:bg-[oklch(0.95_0.03_150)] hover:text-[oklch(0.48_0.12_155)]"
+              title="Open in new tab"
+            >
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          )}
+        </div>
       </div>
-      <div className="h-[420px] bg-[oklch(0.985_0.005_90)]">
+      <div className="h-[520px] bg-[oklch(0.985_0.005_90)]">
         {previewUrl ? (
           <iframe
             title="Generated site preview"
             src={previewUrl}
             className="h-full w-full bg-white"
+            sandbox="allow-scripts allow-same-origin"
           />
         ) : (
           <div className="flex h-full items-center justify-center px-8 text-center text-sm leading-6 text-stone-500">
-            Load a prospect and create a tracker record to preview the generated
-            Startup Miracle landing page URL.
+            Load a prospect and generate a website to see it previewed here.
           </div>
         )}
       </div>

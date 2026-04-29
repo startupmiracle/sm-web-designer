@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { ChevronDown, ChevronUp, Sparkles } from "lucide-react";
 import templates from "@/data/templates/industry-templates.json";
 import { AppHeader } from "@/components/AppHeader";
 import { BuilderSearch } from "@/components/BuilderSearch";
@@ -131,8 +132,19 @@ export function WebDesignerApp() {
       ...previous.filter((item) => item.id !== loadedProspect.id),
     ].slice(0, 5));
     setGeneratedPrompt(createPrompt(loadedProspect, template));
-    setPreviewUrl(`https://get.startupmiracle.com/${createSlug(loadedProspect)}`);
-    setStep(1);
+
+    // Check if a local preview exists, otherwise fall back to production URL
+    const slug = createSlug(loadedProspect);
+    const localPreview = `/api/preview/${slug}`;
+    try {
+      const check = await fetch(localPreview, { method: "HEAD" });
+      setPreviewUrl(check.ok ? localPreview : `https://get.startupmiracle.com/${slug}`);
+      setStep(check.ok ? 3 : 1);
+    } catch {
+      setPreviewUrl(`https://get.startupmiracle.com/${slug}`);
+      setStep(1);
+    }
+
     setLoading(false);
   }, [selectedTemplate, uuid]);
 
@@ -234,6 +246,8 @@ export function WebDesignerApp() {
     return data.message || "Ollama test did not return a response.";
   }
 
+  const [promptExpanded, setPromptExpanded] = useState(false);
+
   return (
     <div className="min-h-screen bg-[oklch(0.97_0.01_90)] text-[oklch(0.25_0.02_50)]">
       <div className="grid min-h-screen lg:grid-cols-[288px_minmax(0,1fr)]">
@@ -245,8 +259,9 @@ export function WebDesignerApp() {
           <AppHeader activeModel={settings.activeModel} costEstimate={costEstimate} />
           <main className="space-y-6 px-5 py-6 lg:px-8">
             {activeSection === "builder" && (
-              <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_280px]">
-                <div className="space-y-6">
+              <div className="space-y-6">
+                {/* Search + Stepper */}
+                <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_260px]">
                   <BuilderSearch
                     uuid={uuid}
                     loading={loading}
@@ -254,40 +269,67 @@ export function WebDesignerApp() {
                     onUuidChange={setUuid}
                     onLoad={() => loadProspect()}
                   />
-                  <ProgressStepper currentStep={step} />
-                  <div className="grid gap-6 2xl:grid-cols-2">
-                    <ProspectPanel prospect={prospect} />
-                    <PromptPanel
-                      prompt={generatedPrompt}
-                      onPromptChange={setGeneratedPrompt}
-                    />
-                  </div>
-                  <div className="grid gap-6 xl:grid-cols-[minmax(0,1fr)_260px]">
-                    <PreviewPanel previewUrl={previewUrl} />
-                    <div className="space-y-3 rounded-2xl border border-[oklch(0.88_0.03_90)] bg-white p-5 shadow-sm">
-                      <h2 className="text-sm font-semibold text-stone-800">
-                        Generation Controls
-                      </h2>
-                      <p className="text-sm leading-6 text-stone-500">
-                        {suggestedTemplate
-                          ? `${suggestedTemplate.name} template selected for this build.`
-                          : "Select a template or load a prospect to infer one."}
-                      </p>
-                      <button
-                        onClick={createTrackerRecord}
-                        disabled={!prospect}
-                        className="w-full rounded-xl bg-[oklch(0.48_0.12_155)] px-4 py-3 text-sm font-medium text-white disabled:opacity-50"
-                      >
-                        Add to Tracker
-                      </button>
-                    </div>
+                  <div className="space-y-3 rounded-2xl border border-[oklch(0.88_0.03_90)] bg-white p-5 shadow-sm">
+                    <h2 className="text-sm font-semibold text-stone-800">
+                      Generation Controls
+                    </h2>
+                    <p className="text-sm leading-6 text-stone-500">
+                      {suggestedTemplate
+                        ? `${suggestedTemplate.name} preset selected.`
+                        : "Load a prospect to begin."}
+                    </p>
+                    <button
+                      onClick={createTrackerRecord}
+                      disabled={!prospect}
+                      className="w-full rounded-xl bg-[oklch(0.48_0.12_155)] px-4 py-3 text-sm font-medium text-white disabled:opacity-50"
+                    >
+                      Add to Tracker
+                    </button>
                   </div>
                 </div>
-                <HistorySidebar
-                  recentProspects={recentProspects}
-                  generatedSites={generatedSites}
-                  onLoadProspect={loadProspect}
-                />
+
+                <ProgressStepper currentStep={step} />
+
+                {/* Prospect Card + Live Preview side by side */}
+                <div className="grid gap-6 xl:grid-cols-[380px_minmax(0,1fr)]">
+                  <ProspectPanel prospect={prospect} />
+                  <PreviewPanel previewUrl={previewUrl} />
+                </div>
+
+                {/* Agent Prompt — collapsed by default */}
+                <div className="rounded-2xl border border-[oklch(0.88_0.03_90)] bg-white shadow-sm">
+                  <button
+                    onClick={() => setPromptExpanded(!promptExpanded)}
+                    className="flex w-full items-center justify-between px-5 py-4"
+                  >
+                    <div className="flex items-center gap-2">
+                      <Sparkles className="h-4 w-4 text-[oklch(0.48_0.12_155)]" />
+                      <h2 className="text-sm font-semibold text-[oklch(0.25_0.02_50)]">
+                        Agent Prompt
+                      </h2>
+                      {generatedPrompt && (
+                        <span className="rounded-full bg-[oklch(0.95_0.03_150)] px-2 py-0.5 text-[10px] font-medium text-[oklch(0.4_0.12_150)]">
+                          Ready
+                        </span>
+                      )}
+                    </div>
+                    <span className="rounded-lg p-1 text-stone-400 hover:bg-stone-100">
+                      {promptExpanded ? (
+                        <ChevronUp className="h-4 w-4" />
+                      ) : (
+                        <ChevronDown className="h-4 w-4" />
+                      )}
+                    </span>
+                  </button>
+                  {promptExpanded && (
+                    <div className="border-t border-[oklch(0.9_0.02_90)]">
+                      <PromptPanel
+                        prompt={generatedPrompt}
+                        onPromptChange={setGeneratedPrompt}
+                      />
+                    </div>
+                  )}
+                </div>
               </div>
             )}
             {activeSection === "templates" && (
@@ -297,7 +339,17 @@ export function WebDesignerApp() {
               />
             )}
             {activeSection === "tracker" && (
-              <KanbanBoard sites={generatedSites} onMoveSite={moveSite} />
+              <div className="space-y-8">
+                <KanbanBoard sites={generatedSites} onMoveSite={moveSite} />
+                <HistorySidebar
+                  recentProspects={recentProspects}
+                  generatedSites={generatedSites}
+                  onLoadProspect={(id) => {
+                    setActiveSection("builder");
+                    void loadProspect(id);
+                  }}
+                />
+              </div>
             )}
             {activeSection === "settings" && (
               <SettingsPanel

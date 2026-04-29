@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Check, Copy, Sparkles } from "lucide-react";
+import { Check, Copy } from "lucide-react";
 
 interface PromptPanelProps {
   prompt: string;
@@ -18,14 +18,8 @@ export function PromptPanel({ prompt, onPromptChange }: PromptPanelProps) {
   };
 
   return (
-    <section className="flex min-h-[520px] flex-col overflow-hidden rounded-2xl border border-[oklch(0.88_0.03_90)] bg-white shadow-sm">
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[oklch(0.9_0.02_90)] p-5">
-        <div className="flex items-center gap-2">
-          <Sparkles className="h-5 w-5 text-[oklch(0.48_0.12_155)]" />
-          <h2 className="font-semibold text-[oklch(0.25_0.02_50)]">
-            Agent Prompt
-          </h2>
-        </div>
+    <section className="flex min-h-[320px] flex-col">
+      <div className="flex flex-wrap items-center justify-end gap-3 px-5 py-3">
         <button
           onClick={copyPrompt}
           disabled={!prompt}
@@ -39,7 +33,7 @@ export function PromptPanel({ prompt, onPromptChange }: PromptPanelProps) {
         value={prompt}
         onChange={(event) => onPromptChange(event.target.value)}
         placeholder="Template instructions and prospect context will appear here."
-        className="min-h-0 flex-1 resize-none bg-[oklch(0.985_0.005_90)] p-5 font-mono text-sm leading-6 text-stone-700 outline-none"
+        className="min-h-0 flex-1 resize-none rounded-b-2xl bg-[oklch(0.985_0.005_90)] p-5 font-mono text-sm leading-6 text-stone-700 outline-none"
       />
     </section>
   );

@@ -1,0 +1,494 @@
+{
+  "template_id": "sm-web-001-roofing",
+  "template_name": "RoofGuard Solution Roofing Landing Page",
+  "authorship": {
+    "created_by": "Codex",
+    "model_family": "GPT-5 coding agent",
+    "created_for": [
+      "Qwen3.5 AI Web Designer",
+      "Claude"
+    ],
+    "created_at": "2026-04-29",
+    "signature": "This structured visual template was analyzed, authored, and signed by Codex for reuse as an AI web design reference."
+  },
+  "source_image": "sm-web-001-roofing.webp",
+  "source_dimensions_px": {
+    "width": 1024,
+    "height": 4024,
+    "aspect_ratio": "256:1006"
+  },
+  "intended_use": "AI web designer reference template for generating premium local-service landing pages, especially roofing, construction, home repair, remodeling, and exterior services.",
+  "design_summary": {
+    "style": "clean premium service website with strong photographic hero, rounded content blocks, orange conversion accents, and spacious white sections",
+    "mood": [
+      "trustworthy",
+      "modern",
+      "professional",
+      "warm",
+      "homeowner-focused"
+    ],
+    "visual_density": "medium",
+    "layout_archetype": "single-page landing page with hero, service cards, process, testimonials, lead form, and footer",
+    "primary_conversion_goal": "drive quote requests and roof inspection bookings"
+  },
+  "canvas": {
+    "page_background": "#facdb1",
+    "site_shell_background": "#ffffff",
+    "site_shell_width": "94% desktop, max-width approximately 960px",
+    "site_shell_alignment": "center",
+    "outer_margin": "32px top and bottom on desktop, 20px mobile",
+    "section_spacing": "72px desktop, 44px mobile",
+    "container_padding": "28px desktop, 18px mobile",
+    "corner_radius": {
+      "large_media": "10px",
+      "cards": "8px",
+      "buttons": "999px",
+      "inputs": "999px"
+    },
+    "shadow_style": "soft, minimal, mostly used on cards and form panel"
+  },
+  "color_palette": {
+    "primary": {
+      "name": "Safety Orange",
+      "hex": "#f96310",
+      "usage": "primary CTA buttons, active nav item, circular icons, accordion active state, small directional controls"
+    },
+    "primary_dark": {
+      "name": "Burnt Orange",
+      "hex": "#d9530c",
+      "usage": "button hover states and footer icon emphasis"
+    },
+    "background_peach": {
+      "name": "Warm Peach Frame",
+      "hex": "#fcceb2",
+      "usage": "outer page background and subtle gradient panels"
+    },
+    "surface": {
+      "name": "White",
+      "hex": "#ffffff",
+      "usage": "main website shell, cards, navbar, form panel"
+    },
+    "surface_soft": {
+      "name": "Soft Gray",
+      "hex": "#f5f5f5",
+      "usage": "section backgrounds, service cards, footer, inactive panels"
+    },
+    "text_primary": {
+      "name": "Charcoal",
+      "hex": "#231f23",
+      "usage": "headings, strong labels, footer logo text"
+    },
+    "text_secondary": {
+      "name": "Cool Gray",
+      "hex": "#605c5f",
+      "usage": "body copy and secondary headings"
+    },
+    "text_muted": {
+      "name": "Light Neutral Gray",
+      "hex": "#9e9fa3",
+      "usage": "captions, form placeholders, subdued metadata"
+    },
+    "blue_gray": {
+      "name": "Roof Sky Blue Gray",
+      "hex": "#b4cbd6",
+      "usage": "photo tinting, hero overlay harmony, contact section atmosphere"
+    },
+    "deep_roof": {
+      "name": "Dark Roof Brown",
+      "hex": "#512f29",
+      "usage": "photo shadows and dark overlays"
+    }
+  },
+  "typography": {
+    "font_family_recommendation": "Use a modern geometric sans-serif such as Inter, Manrope, Satoshi, or Plus Jakarta Sans.",
+    "font_character": "rounded, contemporary, high legibility, medium x-height",
+    "heading_weight": "700",
+    "body_weight": "400",
+    "button_weight": "600",
+    "letter_spacing": "0",
+    "scale": {
+      "hero_wordmark": {
+        "size_desktop": "150px to 170px",
+        "size_tablet": "88px to 110px",
+        "size_mobile": "56px to 72px",
+        "weight": "800",
+        "case": "uppercase",
+        "color": "rgba(255,255,255,0.86)",
+        "line_height": "0.9"
+      },
+      "hero_heading": {
+        "size_desktop": "34px to 40px",
+        "size_mobile": "28px to 32px",
+        "weight": "700",
+        "line_height": "1.08"
+      },
+      "section_heading": {
+        "size_desktop": "34px to 42px",
+        "size_mobile": "28px to 34px",
+        "weight": "700",
+        "line_height": "1.1"
+      },
+      "card_title": {
+        "size": "17px to 20px",
+        "weight": "700",
+        "line_height": "1.2"
+      },
+      "body": {
+        "size": "13px to 15px",
+        "weight": "400",
+        "line_height": "1.55"
+      },
+      "caption": {
+        "size": "11px to 12px",
+        "weight": "500",
+        "line_height": "1.35"
+      }
+    }
+  },
+  "layout_structure": {
+    "grid_system": "12-column desktop grid with 24px gutters; collapse to 1-column mobile with selective 2-column cards where space allows",
+    "visual_rhythm": "alternate full-width media blocks, two-column editorial rows, card grids, and strong centered statement panels",
+    "image_treatment": "large rounded photography with subtle dark overlays where text is placed on top; service images are cropped tightly around workers, roofs, tools, and homes",
+    "button_style": "pill buttons, orange fill for primary actions, white or light neutral fill for secondary actions, optional arrow or phone icon",
+    "icon_style": "small rounded orange line icons or filled orange circular icons"
+  },
+  "section_order": [
+    {
+      "order": 1,
+      "section_id": "navbar",
+      "type": "header_navigation",
+      "layout": "horizontal bar inside white shell, logo left, centered nav links, CTA button right",
+      "height": "60px to 68px",
+      "content": {
+        "logo": "abstract orange roof mark plus two-line brand name",
+        "nav_items": [
+          "Home",
+          "Services",
+          "Gallery",
+          "About",
+          "Testimonials"
+        ],
+        "cta": "Contact Us"
+      },
+      "styling": {
+        "background": "#ffffff",
+        "active_link_color": "#f96310",
+        "cta_background": "#f96310",
+        "cta_text": "#ffffff"
+      }
+    },
+    {
+      "order": 2,
+      "section_id": "hero",
+      "type": "image_hero",
+      "layout": "large rounded rectangular hero image with oversized translucent wordmark behind foreground copy",
+      "height": "560px desktop, 480px tablet, 620px mobile if stacked",
+      "background_image_subject": "roofer working on modern metal roof under cloudy blue-gray sky",
+      "overlay": "subtle dark gradient from lower left and soft atmospheric light overlay",
+      "content": {
+        "oversized_word": "ROOFING",
+        "headline": "Shield Your Home with Sleek, Modern Roofing Solutions",
+        "body": "Short supporting sentence about durability, style, and expert roofing work.",
+        "primary_cta": "Get Your Free Estimate",
+        "secondary_cta": "Call Now"
+      },
+      "positioning": {
+        "oversized_word": "top third, spanning nearly full width",
+        "headline": "lower left, max-width 520px",
+        "cta_group": "below headline, horizontal on desktop and stacked on narrow mobile"
+      }
+    },
+    {
+      "order": 3,
+      "section_id": "intro_gallery",
+      "type": "intro_plus_gallery",
+      "layout": "two-row asymmetric grid: heading and small feature blurb above image gallery cards",
+      "content": {
+        "heading": "Your Primary Home Deserves Top-Tier Roofing",
+        "small_feature": "compact blurb with small circular tool image",
+        "left_card": "pricing teaser with roof photo and orange button",
+        "center_card": "large portfolio gallery image with overlaid label and circular arrow controls",
+        "right_card": "light card explaining smart roofing protection with text link"
+      },
+      "grid": "desktop: 3 columns with center card widest; mobile: stacked cards"
+    },
+    {
+      "order": 4,
+      "section_id": "services",
+      "type": "service_cards_carousel",
+      "layout": "intro copy left, section heading right, then horizontal row of rounded service cards",
+      "content": {
+        "heading": "Durable, Stylish Roofing Solutions",
+        "intro_copy": "Brief proof-oriented copy about installations, repairs, and long-term protection.",
+        "cards": [
+          {
+            "title": "Call Now",
+            "style": "orange-tinted contact card with person photo and phone pill"
+          },
+          {
+            "title": "New Roof Installation",
+            "image": "roofing material or roof sample",
+            "cta_icon": "arrow"
+          },
+          {
+            "title": "Expert Roof Repair",
+            "image": "worker repairing roof",
+            "cta_icon": "arrow"
+          },
+          {
+            "title": "Full Roof Replacement",
+            "image": "crew on residential roof",
+            "cta_icon": "arrow"
+          }
+        ]
+      },
+      "interaction_hint": "small circular previous and next controls near heading"
+    },
+    {
+      "order": 5,
+      "section_id": "brand_statement",
+      "type": "centered_statement_panel",
+      "layout": "wide rounded rectangle with warm peach-to-white gradient background",
+      "content": {
+        "statement": "Roofing is more than a structure - it's your home's foundation. We empower homeowners with quality craftsmanship, clear pricing, and durable solutions for lasting security and value."
+      },
+      "typography": "large centered bold paragraph, max-width about 760px"
+    },
+    {
+      "order": 6,
+      "section_id": "about_mission",
+      "type": "about_with_accordion",
+      "layout": "three-column row: text left, tall image center, accordion stack right",
+      "content": {
+        "heading": "Transform Your Home with Premium Roofing",
+        "body": "Short paragraph about expert craftsmanship, clear pricing, and durable protection.",
+        "cta": "More About Us",
+        "image_subject": "roofers installing shingles on pitched roof",
+        "accordion_items": [
+          {
+            "title": "Our Mission",
+            "state": "open",
+            "background": "#f96310"
+          },
+          {
+            "title": "Our Vision",
+            "state": "closed",
+            "background": "#ffffff"
+          },
+          {
+            "title": "Our Value",
+            "state": "closed",
+            "background": "#ffffff"
+          }
+        ]
+      }
+    },
+    {
+      "order": 7,
+      "section_id": "process",
+      "type": "process_steps",
+      "layout": "heading and intro left, four compact cards right",
+      "content": {
+        "heading": "Our Simple Process",
+        "steps": [
+          "Free Consultation",
+          "Proper Detailed Plan",
+          "Expert Installation",
+          "Final Inspection"
+        ]
+      },
+      "card_style": "soft gray cards, orange line icons, compact body text"
+    },
+    {
+      "order": 8,
+      "section_id": "testimonials",
+      "type": "testimonial_cards",
+      "layout": "centered heading above three equal cards",
+      "content": {
+        "heading": "Clients Speak for Us",
+        "cards": [
+          {
+            "image_subject": "middle-aged woman homeowner portrait",
+            "name": "Sarah Johnson",
+            "rating": "4.9"
+          },
+          {
+            "image_subject": "older man homeowner portrait outdoors",
+            "name": "Mike Rodriguez",
+            "rating": "4.8"
+          },
+          {
+            "image_subject": "smiling woman homeowner portrait in bright home",
+            "name": "Jennifer Chen",
+            "rating": "4.9"
+          }
+        ]
+      },
+      "card_style": "rounded white cards with top portrait image, quote text, name, location, star rating"
+    },
+    {
+      "order": 9,
+      "section_id": "lead_capture",
+      "type": "contact_form_on_image",
+      "layout": "wide rounded background image panel with white form card on left and contact text on right",
+      "background_image_subject": "residential roof exterior with sky",
+      "overlay": "blue-gray and warm dark gradient for contrast",
+      "content": {
+        "form_heading": "Book a Roof Inspection & Receive a Free Estimate",
+        "fields": [
+          "First Name",
+          "Last Name",
+          "Email Address",
+          "Phone",
+          "Street",
+          "City",
+          "Select Date",
+          "Zip/Postal Code"
+        ],
+        "checkbox": "SMS consent message",
+        "submit": "Get A Free Roof Inspection",
+        "right_heading": "Let's Connect",
+        "contact_info": [
+          "Phone",
+          "Email",
+          "Service Area"
+        ]
+      }
+    },
+    {
+      "order": 10,
+      "section_id": "footer",
+      "type": "footer_with_map",
+      "layout": "four-column footer with logo/description, page links, support/legal links, map preview",
+      "content": {
+        "brand": "RoofGuard Solution",
+        "description": "Short trust statement about professional roofing service.",
+        "social_icons": "small orange icons",
+        "link_groups": [
+          "Pages",
+          "Support",
+          "Legal"
+        ],
+        "map": "light map image card with orange location pin",
+        "background_wordmark": "ROOFGUARD"
+      },
+      "styling": {
+        "background": "#ffffff",
+        "divider": "#eeeeee",
+        "background_wordmark_color": "rgba(35,31,35,0.05)"
+      }
+    }
+  ],
+  "responsive_behavior": {
+    "desktop": "centered white site shell with multi-column grids and full-width hero inside shell",
+    "tablet": "reduce hero wordmark size, keep two-column sections where possible, wrap service cards",
+    "mobile": "single-column layout, sticky or collapsed nav, hero text remains over image, cards stack vertically, form fields become one column",
+    "minimum_touch_target": "44px",
+    "image_cropping": "preserve worker and roof as focal points; avoid cropping heads, tools, or CTA text"
+  },
+  "qwen_generation_rules": {
+    "preserve_order": true,
+    "generate_as_single_page": true,
+    "prioritize_photography": true,
+    "avoid": [
+      "generic stock-business imagery",
+      "excessive gradients",
+      "purple or blue-dominant SaaS styling",
+      "oversized marketing cards unrelated to service conversion",
+      "cartoon illustrations"
+    ],
+    "must_include": [
+      "white centered website shell on peach background",
+      "large photographic roofing hero",
+      "oversized translucent ROOFING word in hero",
+      "orange pill CTAs",
+      "service card row",
+      "centered statement gradient panel",
+      "about section with image and accordion",
+      "four-step process",
+      "three testimonial cards",
+      "lead capture form over roof image",
+      "footer with map preview and giant faint brand word"
+    ],
+    "content_adaptation": "Replace roofing-specific text and imagery when adapting to another trade, but keep the same section rhythm, hierarchy, card density, rounded geometry, and conversion flow."
+  },
+
+  "image_generation": {
+    "engine": "gpt-image-2",
+    "api_endpoint": "v1/images/generations",
+    "default_size": "1536x1024",
+    "default_quality": "medium",
+    "style_rules": [
+      "Photorealistic only — no illustrations, no cartoons, no AI-looking renders",
+      "Warm natural lighting, golden hour preferred for exteriors",
+      "Real workers in proper safety gear, real tools, real job sites",
+      "Location must feel authentic to the prospect's city/state",
+      "No text, logos, or watermarks burned into the image",
+      "Diverse, professional-looking crew and homeowners"
+    ],
+
+    "prompt_templates": {
+      "hero_bg": {
+        "slot": "hero section background",
+        "size": "1536x1024",
+        "prompt": "Professional {prospect_category} crew working on a {prospect_services_primary} job at a {prospect_ideal_client_property_type} in {prospect_city}, {prospect_state}. Golden hour sunlight, wide-angle lens, warm tones, photorealistic. The crew wears branded safety gear. Neighborhood visible in background showing {prospect_geo_region_style} architecture. Shot from slight low angle to convey trust and scale."
+      },
+      "intro_image": {
+        "slot": "intro section — completed project showcase",
+        "size": "1024x1024",
+        "prompt": "Beautiful {prospect_ideal_client_property_type} in {prospect_city}, {prospect_state} with a freshly completed {prospect_services_primary} job. Clean, professional finish. Manicured front yard, warm afternoon light, real estate photography style. {prospect_geo_region_style} architectural style. The {prospect_category} work is the clear focal point."
+      },
+      "service_cards": {
+        "slot": "service cards — one per service offered",
+        "size": "1024x1024",
+        "count": "match prospect_services array length (max 4)",
+        "prompt_per_service": "Close-up of a professional {prospect_category} technician performing {service_name} on a {prospect_ideal_client_property_type}. Hands visible with proper tools, clean worksite, natural light. Located in {prospect_geo_region_style} setting. Photorealistic, editorial quality, tight crop on the work being done."
+      },
+      "portfolio_before": {
+        "slot": "project gallery — before state",
+        "size": "1024x1024",
+        "prompt": "Realistic 'before' photo of a {prospect_ideal_client_property_type} in {prospect_city} needing {prospect_services_primary} work. Visible wear, aging, or damage that a {prospect_category} professional would fix. Overcast natural light, documentary photography style. No extreme destruction — just honest wear that motivates a homeowner to call."
+      },
+      "portfolio_after": {
+        "slot": "project gallery — after state",
+        "size": "1024x1024",
+        "prompt": "Realistic 'after' photo of the same style {prospect_ideal_client_property_type} in {prospect_city} with a beautifully completed {prospect_services_primary} job. Bright sunny day, fresh materials, clean worksite, curb appeal transformation. Same {prospect_geo_region_style} architecture. The improvement is dramatic but believable."
+      },
+      "testimonial_portraits": {
+        "slot": "testimonial section — customer headshots",
+        "size": "1024x1024",
+        "count": 3,
+        "prompt": "Friendly, approachable homeowner portrait in {prospect_city}, {prospect_state}. Standing near their {prospect_ideal_client_property_type} with a warm, genuine smile. Natural outdoor light, shallow depth of field, upper body shot. The person looks like a real satisfied customer of a local {prospect_category} company — not a model. Age range {portrait_age_range}, {portrait_description}."
+      },
+      "contact_bg": {
+        "slot": "contact/lead capture section background",
+        "size": "1536x1024",
+        "prompt": "Wide exterior shot of a {prospect_ideal_client_property_type} in {prospect_city}, {prospect_state} showcasing excellent {prospect_category} work against a clear sky. Slight blue-hour or late afternoon atmosphere. Shot from the street perspective showing the full property. {prospect_geo_region_style} neighborhood. Will be used as a background behind a contact form — needs clear sky area on right side for text overlay."
+      }
+    },
+
+    "variable_mappings": {
+      "prospect_category": "prospect.category (e.g. 'roofing', 'fencing', 'plumbing')",
+      "prospect_city": "prospect.city",
+      "prospect_state": "prospect.state",
+      "prospect_services_primary": "first/main service extracted from reviews or template defaults",
+      "prospect_services": "all services array extracted from reviews_data keywords + template.defaultServices",
+      "prospect_ideal_client_property_type": "inferred from category: roofing/fencing/landscaping → 'residential home', plumbing/hvac → 'single-family home', painting → 'home or storefront', general-contractor → 'home under renovation'",
+      "prospect_geo_region_style": "inferred from state: FL → 'Florida stucco and tile', TX → 'Texas ranch-style', Northeast → 'colonial or Cape Cod', Southwest → 'adobe and southwestern', Pacific NW → 'craftsman bungalow', Midwest → 'midwestern brick and siding'",
+      "portrait_age_range": "vary across 3 portraits: '30-40', '45-55', '55-65'",
+      "portrait_description": "vary across 3 portraits for diversity in gender, ethnicity, and style"
+    },
+
+    "generation_sequence": [
+      "1. Extract prospect data from Supabase by UUID",
+      "2. Resolve all variables using prospect fields + variable_mappings",
+      "3. Generate hero_bg first (largest, sets visual tone)",
+      "4. Generate service_cards in parallel (one per service, max 4)",
+      "5. Generate portfolio_before and portfolio_after as a pair",
+      "6. Generate testimonial_portraits (3 in parallel)",
+      "7. Generate intro_image and contact_bg in parallel",
+      "8. Save all images to sm-web-projects/sm-website-{prospect_slug}/images/",
+      "9. Pass image paths + template JSON to qwen3.5 for HTML generation"
+    ]
+  }
+}
