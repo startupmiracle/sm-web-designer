@@ -32,7 +32,7 @@
     "primary_conversion_goal": "drive quote requests and roof inspection bookings"
   },
   "canvas": {
-    "page_background": "#facdb1",
+    "page_background": "#f5f3f0",
     "site_shell_background": "#ffffff",
     "site_shell_width": "94% desktop, max-width approximately 960px",
     "site_shell_alignment": "center",

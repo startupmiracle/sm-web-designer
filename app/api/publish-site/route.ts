@@ -27,14 +27,15 @@ export async function POST(request: Request) {
     }
   }
 
-  // Check if a generated_sites record exists for this slug
-  const { data: existing } = await supabase
+  // Check if a generated_sites record exists for this slug (use newest)
+  const { data: rows } = await supabase
     .from("generated_sites")
     .select("id")
     .eq("slug", slug)
-    .limit(1)
-    .single();
+    .order("created_at", { ascending: false })
+    .limit(1);
 
+  const existing = rows?.[0];
   if (existing) {
     // Update existing record with HTML
     const { error } = await supabase
